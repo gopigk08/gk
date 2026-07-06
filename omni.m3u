@@ -2,175 +2,175 @@
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1112
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Maa_HD_BTS/WDVLive/*~hmac=baba3354b496ef2736ec8d08c4949f2b0509edbc8292238db26a15ffea51eb9d"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315845~exp=1783337445~acl=/bpk-tv/Maa_HD_BTS/WDVLive/*~hmac=b64a5a6b148a605cea38c2ff79301a41c4090b9192964cfe8a33d20b236d7c20"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1112" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_HD.png" group-title="Telugu" tvg-name="Star Maa HD",Star Maa HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_HD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1354
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ZeeTeluguHD_BTS/WDVLive/*~hmac=07b594c0d724f9bc74e35617089ce88c7090021244ce54ed11f2527875a78344"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ZeeTeluguHD_BTS/WDVLive/*~hmac=5094d745f0389b8f62c9409b4fe453bc31d2d28984159e9fedc9cbe05e2db92a"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1354" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTeluguHD.png" group-title="Telugu" tvg-name="Zee Telugu HD",Zee Telugu HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeTeluguHD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=897
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297848~exp=1783319448~acl=/*~hmac=9d9d56c8f70f162e81279bbc46cbb467c287f7cd9a6ec89a79c19901e6908ba4"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315848~exp=1783337448~acl=/*~hmac=6bd2e00355ca1a53ed4921d6b66d7fc53140b2f839c45ba2bc134a7cbdbab7e2"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="897" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_TV_HD.png" group-title="Telugu" tvg-name="Gemini TV HD",Gemini TV HD
 https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_TV_HD_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1973
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ETV_HD_BTS/WDVLive/*~hmac=aa7667465a141d1ec7b4564e46ae927fe18577c44e1695f44127b252ea3b71fd"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ETV_HD_BTS/WDVLive/*~hmac=34313be6456e1c4f2cb31b7a788d219206660897d1dd7298f5526796adca947d"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1973" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_HD.png" group-title="Telugu" tvg-name="ETV HD",ETV HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_HD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1363
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ZeeCinemaluHD_BTS/WDVLive/*~hmac=657c9808bd694dd5579ca62bfb4851acca38d702903b85ac922e3893d300be26"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ZeeCinemaluHD_BTS/WDVLive/*~hmac=b03efbca280b80c187711eca4b97a14c104bcbb1fc7007cda2e601107ad4622e"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1363" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeCinemaluHD.png" group-title="Telugu" tvg-name="Zee Cinemalu HD",Zee Cinemalu HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeCinemaluHD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=899
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297848~exp=1783319448~acl=/*~hmac=9d9d56c8f70f162e81279bbc46cbb467c287f7cd9a6ec89a79c19901e6908ba4"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315848~exp=1783337448~acl=/*~hmac=6bd2e00355ca1a53ed4921d6b66d7fc53140b2f839c45ba2bc134a7cbdbab7e2"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="899" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Movies_HD.png" group-title="Telugu" tvg-name="Gemini Movies HD",Gemini Movies HD
 https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Movies_HD_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=760
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Maa_Movies_HD_BTS/WDVLive/*~hmac=20ae2a576e7321b6b6adfaaffb7fc4bdff993dddd72e5cad8d735e2f576556bb"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/Maa_Movies_HD_BTS/WDVLive/*~hmac=63aeea5f59405993d87f9ec676816036fd3e07407fd0c6ca45e73c9126d3bd68"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="760" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Movies_HD.png" group-title="Telugu" tvg-name="Star Maa Movies HD",Star Maa Movies HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Movies_HD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1665
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ETV_Cinema_HD_BTS/WDVLive/*~hmac=e21e19a46f003a26d28d2e694f970535112446f71e6a0b0d77c34aad47a436e9"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ETV_Cinema_HD_BTS/WDVLive/*~hmac=c966c5e7ec487f8f938b59e4182a0a5d0bef42509ed9479ba260051390536cbb"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1665" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Cinema_HD.png" group-title="Telugu" tvg-name="ETV Cinema HD",ETV Cinema HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Cinema_HD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=2956
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ETV_Plus_HD_BTS/WDVLive/*~hmac=de35f4fae49f377471e1d164de55a04c123e749fbe5983753eec30daa24902ab"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ETV_Plus_HD_BTS/WDVLive/*~hmac=3f232714f6b817c797ac7f2af732470bde72d36ce98b508d34456511e3adba87"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="2956" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Plus_HD.png" group-title="Telugu" tvg-name="ETV Plus HD",ETV Plus HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Plus_HD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=684
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297848~exp=1783319448~acl=/*~hmac=9d9d56c8f70f162e81279bbc46cbb467c287f7cd9a6ec89a79c19901e6908ba4"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315848~exp=1783337448~acl=/*~hmac=6bd2e00355ca1a53ed4921d6b66d7fc53140b2f839c45ba2bc134a7cbdbab7e2"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="684" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Life.png" group-title="Telugu" tvg-name="Gemini Life",Gemini Life
 https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Life_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=729
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297848~exp=1783319448~acl=/*~hmac=9d9d56c8f70f162e81279bbc46cbb467c287f7cd9a6ec89a79c19901e6908ba4"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315848~exp=1783337448~acl=/*~hmac=6bd2e00355ca1a53ed4921d6b66d7fc53140b2f839c45ba2bc134a7cbdbab7e2"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="729" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Comedy.png" group-title="Telugu" tvg-name="Gemini Comedy",Gemini Comedy
 https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Comedy_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=898
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297848~exp=1783319448~acl=/*~hmac=9d9d56c8f70f162e81279bbc46cbb467c287f7cd9a6ec89a79c19901e6908ba4"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315848~exp=1783337448~acl=/*~hmac=6bd2e00355ca1a53ed4921d6b66d7fc53140b2f839c45ba2bc134a7cbdbab7e2"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="898" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Gemini_Music_HD.png" group-title="Telugu" tvg-name="Gemini Music HD",Gemini Music HD
 https://jiotvmblive.cdn.jio.com/bpk-tv/Gemini_Music_HD_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1129
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Maa_Music_BTS/WDVLive/*~hmac=55cc7d2b0afd3db12bc054a22fc7a10d984c1fb7de16299338d01b8c13dcf3a9"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/Maa_Music_BTS/WDVLive/*~hmac=38a091b8508d664a6d067ab2ec5029967b88dc4fd2ef836c0c7aa404f4601189"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1129" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Music.png" group-title="Telugu" tvg-name="Star Maa Music",Star Maa Music
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Music_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1138
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Star_Maa_BTS/WDVLive/*~hmac=c79eb408e6792e5037daec257f259c4c00361dac2d96ade8708ca684dfa84cf9"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/Star_Maa_BTS/WDVLive/*~hmac=8c0093396f468aa89b1839f888228fb8d9c845c517337fef0096645ce0ceef5f"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1138" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Maa.png" group-title="Telugu" tvg-name="Star Maa",Star Maa
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Maa_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1111
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Maa_Movies_BTS/WDVLive/*~hmac=93b30afe536588844d6ece6dfc9c9ed12903541cf924d50a652a27d3c70f17a3"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/Maa_Movies_BTS/WDVLive/*~hmac=62fa6e6573db6fc5c5f8fdad93cc200b3533233cac19427acac1679b6783399e"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1111" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Movies.png" group-title="Telugu" tvg-name="Star Maa Movies",Star Maa Movies
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Movies_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=1137
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Maa_Gold_BTS/WDVLive/*~hmac=ed358a200447822752bf3bb147666d59cea2e957b008ef9da0b1bc22eccc7646"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/Maa_Gold_BTS/WDVLive/*~hmac=c738b63ad1f3d2bf148029bdc65e6ba9361f83476873a9c184ad2d26f6e66d08"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="1137" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Maa_Gold.png" group-title="Telugu" tvg-name="Star Maa Gold",Star Maa Gold
 https://jiotvpllive.cdn.jio.com/bpk-tv/Maa_Gold_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=638
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ZeeTelugu_BTS/WDVLive/*~hmac=84730bf269b9eec6e20ab2c9871cc7960f62d750624611cfeb3c979d7d2b6cf1"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ZeeTelugu_BTS/WDVLive/*~hmac=f632a902ddd60858ed342ccbc00bd1194b0165dabbc78c2e8c5162925501bfdc"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="638" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTelugu.png" group-title="Telugu" tvg-name="Zee Telugu",Zee Telugu
 https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeTelugu_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=413
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ZeeCinemalu_BTS/WDVLive/*~hmac=0d804264f1690b19d5c87fb474b3a0bcb767fb18a076ea050fae2257a38e430a"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ZeeCinemalu_BTS/WDVLive/*~hmac=40fd043fd1b77b04638c191baaba54373542822b6637c2923a2debd20f0bb939"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="413" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeCinemalu.png" group-title="Telugu" tvg-name="Zee Cinemalu",Zee Cinemalu
 https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeCinemalu_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=565
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ETV_Abhiruchi_BTS/WDVLive/*~hmac=956f723fd5b4aad14204e93d46cd6e702e658b2635f2f78a2e61e674461f955c"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ETV_Abhiruchi_BTS/WDVLive/*~hmac=84e85df9af564ffe25de463243836b006d2ec382f25c65b12a4f4b4534f4d721"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="565" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Abhiruchi.png" group-title="Telugu" tvg-name="ETV Abhiruchi",ETV Abhiruchi
 https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Abhiruchi_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=570
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ETV_Life_BTS/WDVLive/*~hmac=3b8473fda782d10964483950314aac3f6f9745a7a3ed2c5e2ce519ac5e878776"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ETV_Life_BTS/WDVLive/*~hmac=80a2fd3dee628a7148a17cb57a7e375b7a79d1a8dd09e9b7a8670dd38dd0e15f"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="570" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Life.png" group-title="Telugu" tvg-name="ETV Life",ETV Life
 https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Life_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=614
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ETV_Andhra_pradesh_BTS/WDVLive/*~hmac=bfb2fe3d8f09996c01b79ba4ee90950ce7719f67bead29f6c8a95c87d02489e1"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ETV_Andhra_pradesh_BTS/WDVLive/*~hmac=810464258c8aa42590655cf09bcfa8a4c81897b3a8092ece23abd36c5b949428"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="614" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Andhra_pradesh.png" group-title="Telugu" tvg-name="ETV Andhra pradesh",ETV Andhra pradesh
 https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Andhra_pradesh_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=630
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/ETV_Telangana_BTS/WDVLive/*~hmac=ce16ab39f1c1d7ea1614f67dbd07e24dacbb3d186d3cea7af697c2f33b151826"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/ETV_Telangana_BTS/WDVLive/*~hmac=fc3d943aebe1c27d594a7556a5ee470e6e089f97054fa4d3d40fcddaf302dad5"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="630" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ETV_Telangana.png" group-title="Telugu" tvg-name="ETV Telangana",ETV Telangana
 https://jiotvpllive.cdn.jio.com/bpk-tv/ETV_Telangana_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=558
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297848~exp=1783319448~acl=/*~hmac=9d9d56c8f70f162e81279bbc46cbb467c287f7cd9a6ec89a79c19901e6908ba4"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315848~exp=1783337448~acl=/*~hmac=6bd2e00355ca1a53ed4921d6b66d7fc53140b2f839c45ba2bc134a7cbdbab7e2"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="558" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Kushi_TV.png" group-title="Telugu" tvg-name="Kushi TV",Kushi TV
 https://jiotvmblive.cdn.jio.com/bpk-tv/Kushi_TV_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=3278
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Star_Sports_1_Telugu_HD_BTS/WDVLive/*~hmac=aae30d427ae3a397440fcc194ae8c56b273d6d1c9d9b2b9db1414320665a3408"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/Star_Sports_1_Telugu_HD_BTS/WDVLive/*~hmac=1e9727cf5e093e506dbf0d158ae469538426f21d1311dee68f7aa091ac61b4b1"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="3278" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Sports_1_Telugu_HD.png" group-title="Telugu" tvg-name="Star Sports 1 Telugu HD",Star Sports 1 Telugu HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Telugu_HD_BTS/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://keys.cloudplay.me/key?id=3274
-#EXTHTTP:{"cookie":"__hdnea__=st=1783297846~exp=1783319446~acl=/bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/*~hmac=77f965c80c1ada1ec841ad3010047b267ff420ce3f6d42e6f89b674ccd221f68"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1783315846~exp=1783337446~acl=/bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/*~hmac=336949ebdc76fa38a2fa9f6e7e0b2e1d72b20e027383520b539199583e6f0ca6"}
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6
 #EXTINF:-1 tvg-id="3274" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Sports2_Telugu_HD.png" group-title="Telugu" tvg-name="Star Sports 2 Telugu HD",Star Sports 2 Telugu HD
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Telugu_HD_BTS/WDVLive/index.mpd
