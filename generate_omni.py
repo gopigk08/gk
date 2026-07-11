@@ -41,95 +41,103 @@ def fetch_url(url, retries=RETRY_COUNT):
     return ""
 
 def is_url_line(line):
-    """True if line is a stream URL (not a comment/directive)."""
+    """True if line is a stream URL."""
     s = line.strip()
     return bool(s) and not s.startswith("#") and (s.startswith("http") or s.startswith("rtmp"))
 
-def extract_tvg_id_from_extinf(line):
-    """Extract tvg-id from a #EXTINF line. Returns None if not found."""
-    m = re.search(r'tvg-id="([^"]+)"', line)
+def get_tvg_id(extinf_line):
+    """Extract tvg-id from a #EXTINF line."""
+    m = re.search(r'tvg-id="([^"]+)"', extinf_line)
     if m and m.group(1).strip():
         return m.group(1).strip()
     # Fallback: channel name after last comma
-    parts = line.split(",")
+    parts = extinf_line.split(",")
     if len(parts) > 1:
         return parts[-1].strip()
     return None
 
+def parse_source_into_blocks(content):
+    """
+    Parse M3U content into complete channel blocks.
+    
+    Each block contains ALL lines for one channel:
+      - Optional: #KODIPROP lines
+      - Optional: #EXTHTTP line (with fresh cookies!)
+      - Optional: #EXTVLCOPT line
+      - Required: #EXTINF line
+      - Required: URL line
+    
+    Returns: (header_line, dict{tvg_id: [all lines for this channel]})
+    """
+    lines = [l.rstrip() for l in content.splitlines()]
+    
+    # Extract header
+    header = "#EXTM3U"
+    start_idx = 0
+    if lines and re.match(r'#\s*EXTM3U', lines[0].strip(), re.IGNORECASE):
+        header = lines[0].strip()
+        start_idx = 1
+
+    channels = {}    # tvg_id -> list of lines (full block)
+    current_block = []
+    
+    for line in lines[start_idx:]:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        
+        current_block.append(stripped)
+        
+        if is_url_line(stripped):
+            # Block complete — find tvg-id from the EXTINF line in this block
+            tvg_id = None
+            for bl in current_block:
+                if re.match(r'#\s*EXTINF', bl, re.IGNORECASE):
+                    tvg_id = get_tvg_id(bl)
+                    break
+            if tvg_id:
+                channels[tvg_id] = current_block[:]
+            current_block = []
+    
+    return header, channels
+
 def parse_template_ids(content):
-    """
-    Extract ordered list of tvg-ids from template.m3u.
-    Template may have #KODIPROP, #EXTHTTP, etc. between EXTINF and URL.
-    We only care about tvg-id order, not the actual URLs.
-    """
+    """Extract ordered list of tvg-ids from template.m3u."""
     header = "#EXTM3U"
     ids = []
     for line in content.splitlines():
-        line = line.strip()
-        if re.match(r'#\s*EXTM3U', line, re.IGNORECASE):
-            header = line
-            continue
-        if re.match(r'#\s*EXTINF', line, re.IGNORECASE):
-            cid = extract_tvg_id_from_extinf(line)
+        stripped = line.strip()
+        if re.match(r'#\s*EXTM3U', stripped, re.IGNORECASE):
+            header = stripped
+        elif re.match(r'#\s*EXTINF', stripped, re.IGNORECASE):
+            cid = get_tvg_id(stripped)
             if cid:
                 ids.append(cid)
     return header, ids
 
-def parse_fresh_jio(content):
-    """
-    Parse fresh Jio M3U. Each channel block = one EXTINF line + one URL.
-    Handles '# EXTINF' (with space) and '#EXTINF' (without space).
-    Returns dict: tvg-id -> (extinf_line, url_line)
-    """
-    result = {}
-    lines = content.splitlines()
-    i = 0
-    while i < len(lines):
-        line = lines[i].strip()
-        # Match EXTINF line (with or without space after #)
-        if re.match(r'#\s*EXTINF', line, re.IGNORECASE):
-            extinf_line = line
-            cid = extract_tvg_id_from_extinf(extinf_line)
-            # Look ahead for the URL
-            j = i + 1
-            while j < len(lines) and not is_url_line(lines[j].strip()):
-                j += 1
-            if j < len(lines) and is_url_line(lines[j].strip()):
-                url_line = lines[j].strip()
-                if cid:
-                    result[cid] = (extinf_line, url_line)
-                i = j + 1
-                continue
-        i += 1
-    return result
-
-def parse_gk_m3u(content):
-    """
-    Parse GK.m3u into list of raw blocks (each block = list of lines).
-    Preserves all lines as-is.
-    """
+def parse_gk_blocks(content):
+    """Parse GK.m3u into list of complete blocks, as-is."""
     blocks = []
     current = []
     for line in content.splitlines():
         s = line.strip()
         if not s:
             continue
-        # Skip the EXTM3U header line
         if re.match(r'#\s*EXTM3U', s, re.IGNORECASE):
-            continue
+            continue  # Skip header
         current.append(s)
         if is_url_line(s):
             if len(current) >= 2:
-                blocks.append(current)
+                blocks.append(current[:])
             current = []
     return blocks
 
 def main():
     print("=" * 65)
-    print("  OMNI M3U Generator")
+    print("  OMNI M3U Generator — Full Block Mode")
     print("=" * 65)
 
-    # ── 1. Read Template (for ordered channel IDs only) ──────────
+    # ── 1. Read Template (channel order only) ────────────────────
     print(f"\n[1/4] Reading template: {TEMPLATE_FILE}")
     if not os.path.exists(TEMPLATE_FILE):
         print(f"❌ '{TEMPLATE_FILE}' not found!")
@@ -138,33 +146,33 @@ def main():
         template_content = f.read()
 
     tmpl_header, tmpl_ids = parse_template_ids(template_content)
-    print(f"  ✅ {len(tmpl_ids)} channel IDs extracted from template")
-    print(f"  🔎 First 5 IDs: {tmpl_ids[:5]}")
+    print(f"  ✅ {len(tmpl_ids)} channel IDs from template")
+    print(f"  🔎 First 5: {tmpl_ids[:5]}")
 
-    # ── 2. Fetch & Parse Fresh Jio TV ────────────────────────────
-    print(f"\n[2/4] Fetching fresh Jio TV...")
+    # ── 2. Fetch Fresh Jio TV (complete blocks with fresh cookies) ─
+    print(f"\n[2/4] Fetching fresh Jio TV (with fresh cookies)...")
     jio_content = fetch_url(FRESH_JIO_URL)
     if not jio_content:
         print("❌ Failed to fetch Jio TV. Aborting.")
         sys.exit(1)
 
-    jio_dict = parse_fresh_jio(jio_content)
-    print(f"  ✅ {len(jio_dict)} channels parsed from Jio TV")
-    print(f"  🔎 First 5 Jio IDs: {list(jio_dict.keys())[:5]}")
+    jio_header, jio_channels = parse_source_into_blocks(jio_content)
+    print(f"  ✅ {len(jio_channels)} channels parsed (complete blocks)")
+    print(f"  🔎 First 5 Jio IDs: {list(jio_channels.keys())[:5]}")
 
-    # ── 3. Match & Build Ordered Jio Channels ────────────────────
-    print(f"\n[3/4] Matching template IDs → fresh Jio URLs...")
-    matched_channels = []
+    # ── 3. Match & Order ─────────────────────────────────────────
+    print(f"\n[3/4] Matching {len(tmpl_ids)} template channels...")
+    matched = []
     missing = []
     for cid in tmpl_ids:
-        if cid in jio_dict:
-            matched_channels.append((cid, jio_dict[cid]))
+        if cid in jio_channels:
+            matched.append(jio_channels[cid])  # Full block with fresh cookies!
         else:
             missing.append(cid)
 
-    print(f"  ✅ Matched : {len(matched_channels)} channels")
+    print(f"  ✅ Matched : {len(matched)}")
     if missing:
-        print(f"  ⚠️  Missing : {len(missing)} channels")
+        print(f"  ⚠️  Missing : {len(missing)}")
         for m in missing[:10]:
             print(f"     - {m}")
         if len(missing) > 10:
@@ -173,31 +181,31 @@ def main():
     # ── 4. Fetch GK.m3u ──────────────────────────────────────────
     print(f"\n[4/4] Fetching GK.m3u...")
     gk_content = fetch_url(GK_URL)
-    gk_blocks = parse_gk_m3u(gk_content)
+    gk_blocks = parse_gk_blocks(gk_content)
     print(f"  ✅ {len(gk_blocks)} channels from GK.m3u")
 
     # ── 5. Write omni.m3u ────────────────────────────────────────
-    total = len(matched_channels) + len(gk_blocks)
+    total = len(matched) + len(gk_blocks)
     print(f"\n[5/5] Writing {total} channels → {OUTPUT_FILE}")
 
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
-        # Write EXTM3U header
-        f.write(tmpl_header + "\n")
+        # Use the source header (has x-tvg-url EPG links)
+        f.write(jio_header + "\n")
 
-        # Write matched Jio channels (fresh EXTINF + fresh URL — no stale cookies!)
-        for cid, (extinf_line, url_line) in matched_channels:
-            # Normalize: ensure EXTINF starts with '#EXTINF' (no space)
-            normalized_extinf = re.sub(r'^#\s*EXTINF', '#EXTINF', extinf_line)
-            f.write(normalized_extinf + "\n")
-            f.write(url_line + "\n")
+        # Write matched Jio blocks — COMPLETE with fresh cookies!
+        for block in matched:
+            for line in block:
+                f.write(line + "\n")
 
-        # Write GK.m3u blocks as-is
+        # Write GK blocks as-is
         for block in gk_blocks:
             for line in block:
                 f.write(line + "\n")
 
-    print(f"  ✅ Written successfully!")
+    print(f"  ✅ Done!")
     print(f"\n✅ SUCCESS — omni.m3u ready with {total} channels!")
+    print(f"   Jio channels : {len(matched)}")
+    print(f"   GK channels  : {len(gk_blocks)}")
     print("=" * 65)
 
 if __name__ == "__main__":
