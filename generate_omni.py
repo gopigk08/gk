@@ -16,7 +16,7 @@ RETRY_DELAY   = 5
 
 # Fixed header — always written as the first line of omni.m3u.
 # Edit the x-tvg-url value here to change EPG sources. Script will NOT override this.
-OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz,https://raw.githubusercontent.com/mitthu786/tata-sky-playlist/main/epg.xml.gz"'
+OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml" x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
 def make_ssl_ctx():
