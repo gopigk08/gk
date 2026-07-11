@@ -13,6 +13,10 @@ GK_URL        = "https://raw.githubusercontent.com/gopigk08/Omni/main/GK.m3u"
 OUTPUT_FILE   = "omni.m3u"
 RETRY_COUNT   = 3
 RETRY_DELAY   = 5
+
+# Fixed header — always written as the first line of omni.m3u.
+# Edit the x-tvg-url value here to change EPG sources. Script will NOT override this.
+OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz,https://raw.githubusercontent.com/mitthu786/tata-sky-playlist/main/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
 def make_ssl_ctx():
@@ -189,8 +193,8 @@ def main():
     print(f"\n[5/5] Writing {total} channels → {OUTPUT_FILE}")
 
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
-        # Use the source header (has x-tvg-url EPG links)
-        f.write(jio_header + "\n")
+        # Always use the fixed OUTPUT_HEADER — never overridden by source
+        f.write(OUTPUT_HEADER + "\n")
 
         # Write matched Jio blocks — COMPLETE with fresh cookies!
         for block in matched:
