@@ -1,0 +1,43 @@
+name: Generate Jio Raw M3U
+
+on:
+  schedule:
+    # Runs at minute 14 and 44 of every hour (different times from your old workflow to avoid clash)
+    - cron: '14,44 * * * *'
+  workflow_dispatch:  # Manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Jio Generator Script
+        run: python generate_jio.py
+
+      - name: Commit and push updated files
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add omni-jio.m3u
+          # Only commit if omni-jio.m3u actually changed
+          if git diff --cached --quiet; then
+            echo "No changes detected in omni-jio.m3u — skipping commit."
+          else
+            git commit -m "chore: auto-refresh Jio M3U at $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
