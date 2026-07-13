@@ -3,6 +3,7 @@ import urllib.error
 import ssl
 import sys
 import time
+from datetime import datetime
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 FRESH_JIO_URL = "https://thanks-to-veer.saqlainhaider8198.workers.dev/jtv90.m3u[srisk]?ua=sktechtv"
@@ -10,8 +11,7 @@ OUTPUT_FILE   = "omni-jio.m3u"
 RETRY_COUNT   = 3
 RETRY_DELAY   = 5
 
-# Fixed header — always written as the first line of omni-jio.m3u.
-# Edit the x-tvg-url value here to change EPG sources.
+# Fixed header
 OUTPUT_HEADER = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml" x-tvg-url="https://avkb.short.gy/epg.xml.gz"'
 # ────────────────────────────────────────────────────────────────────────
 
@@ -41,7 +41,6 @@ def fetch_url(url, retries=RETRY_COUNT):
     return ""
 
 def process_playlist(content):
-    """Removes the existing #EXTM3U header from the downloaded content."""
     lines = content.splitlines()
     filtered_lines = []
     for line in lines:
@@ -49,16 +48,15 @@ def process_playlist(content):
         if not s:
             continue
         if s.upper().startswith("#EXTM3U"):
-            continue # Skip the original header
+            continue 
         filtered_lines.append(s)
     return filtered_lines
 
 def main():
     print("=" * 65)
-    print("  OMNI JIO M3U Generator — RAW Mode")
+    print("  OMNI JIO M3U Generator — Auto Update Mode")
     print("=" * 65)
 
-    print(f"\n[1/2] Fetching fresh Jio TV (Raw Data)...")
     jio_content = fetch_url(FRESH_JIO_URL)
     if not jio_content:
         print("❌ Failed to fetch Jio TV. Aborting.")
@@ -67,16 +65,19 @@ def main():
     jio_lines = process_playlist(jio_content)
     print(f"  ✅ Extracted {len(jio_lines)} lines of raw channel data.")
 
-    print(f"\n[2/2] Writing everything to {OUTPUT_FILE}")
+    # Get current time
+    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 
     with open(OUTPUT_FILE, "w", encoding="utf-8", newline="\n") as f:
+        # Write EPG Header
         f.write(OUTPUT_HEADER + "\n")
+        # 🔥 ఇది యాడ్ చేయడం వల్ల ఫైల్ ప్రతి అరగంటకు 100% ఆటోమేటిక్ గా అప్‌డేట్ అవుతుంది 🔥
+        f.write(f"# Last Auto-Updated: {current_time}\n\n")
+
         for line in jio_lines:
             f.write(line + "\n")
 
-    print(f"  ✅ Done!")
-    print(f"\n✅ SUCCESS — {OUTPUT_FILE} is ready with ALL raw channels!")
-    print("=" * 65)
+    print(f"  ✅ SUCCESS — {OUTPUT_FILE} is ready and timestamped!")
 
 if __name__ == "__main__":
     main()
